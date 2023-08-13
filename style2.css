@@ -1,0 +1,239 @@
+html {
+  margin: 0px;
+}
+
+body {
+  margin: 0px;
+  height: 100vh;
+  width: 100%;
+}
+
+body:before {
+  content: "";
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  /* background: url('prima2.6.jpg') no-repeat center center; */
+  background: linear-gradient(to bottom, rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url("prima2.7.jpg")  no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.widescreen {
+  display: none;
+}
+
+/* .emptydiv::before {
+  content: "";
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -10;
+  background: url('prima2.6.jpg') no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+} */
+
+.emptydiv {
+  width: 100%;
+  height: 100vh;
+  background: url('prima2.6.jpg') no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.primatxt {
+  font-size: 5vh;
+  font-family: "lust-sans";
+  color: #436f78;
+}
+
+.firstimg {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  height: 35vh;
+  background-image: url('prima6.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.yatll {
+  padding-top: 3vh;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  border-top: 5px solid #436f78;
+  margin-top: 5vh;
+  text-align: center;
+  font-size: 7vw;
+  font-family: "lust-sans";
+  font-style: italic;
+  color: #436f78;
+}
+
+.buttonsdiv {
+  margin-top: 5vh;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+  padding-bottom: 5vh;
+  border-bottom: 5px solid #436f78;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.myBtn {
+  padding-left: 1vw;
+  padding-right: 1vw;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: #dec699;
+  font-size: 4vh;
+  background-image: linear-gradient(rgba(67, 111, 120, 0.8), rgba(67, 111, 120, 0.8));
+  width: auto;
+  height: 7vh;
+  cursor: pointer;
+  /* display: inline-block; */
+  border: 3px solid #dec699;
+  transition: border 1s;
+}
+
+.myBtn1:hover {
+  /* border: 2px solid black; */
+  background-image: linear-gradient(rgba(67, 111, 120, 0.3), rgba(67, 111, 120, 0.3));
+  /* animation: slide 2s forward; */
+}
+
+.secondimg {
+  margin-top: 5vh;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  height: 35vh;
+  background-image: url('prima3.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.aftersi {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  border-top: 5px solid #436f78;
+  border-bottom: 5px solid #436f78;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  font-size: 4vh;
+  font-family: Montserrat;
+  text-align: center;
+  color: #436f78;
+
+}
+
+.thirdimg {
+  margin-top: 5vh;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  height: 35vh;
+  background-image: url('prima4.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.afterti {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  border-top: 5px solid #436f78;
+  border-bottom: 5px solid #436f78;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  font-size: 4vh;
+  font-family: Montserrat;
+  text-align: center;
+  color: #436f78;
+
+}
+
+.contactinfo {
+  width: 70%;
+  font-size: 3vh;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Montserrat;
+  text-align: center;
+  color: #436f78;
+  margin-bottom: 5vh;
+}
+
+                                          /* property page */
+
+
+#search-bar {
+width: 100%;
+height: 7vh;
+font-size: 1em;
+/* padding: 11px; */
+border: 3px solid #ddd;
+border-radius: 15px;
+}
+
+.searchbar {
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 15vh;
+width: 60%;
+height: auto;
+}
+
+
+.properties {
+height: auto;
+width: 80%;
+display: flex;
+flex-direction: row;
+margin-right: auto;
+margin-left: auto;
+border: 2px solid black;
+margin-bottom: 5vh;
+}
+
+.propertyimg {
+background-image: url('prima5.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+width: 50%;
+height: 40vh;
+}
+
+.propertyinfo {
+width: 50%;
+height: 40vh;
+display: flex;
+/* justify-content: center; */
+text-align: center;
+align-items: center;
+font-size: 1.5em;
+font-family: Montserrat;
+}

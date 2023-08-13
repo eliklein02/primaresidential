@@ -1,0 +1,399 @@
+html {
+  width: 100%;
+}
+
+body {
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+  /* background-color: #dec699; */
+  /* background-color: #b8a379; */
+  /* background-image: url('prima2.6.jpg'); */
+  background-image: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0)), url("prima2.7.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* html, body {
+    overflow-x:hidden;
+} */
+
+.widescreen {
+  width: 100%;
+}
+
+.smallscreen {
+  display: none;
+}
+
+
+.parallax1 {
+  height: 100vh;
+  width: 100%;
+  background-image: url('prima2.6.jpg');
+  /* background-image: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.0)), url("prima2.6.jpg"); */
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.afterscroll1 {
+  scroll-behavior: smooth;
+  /* margin-bottom: 15px; */
+  height: 65vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.as3 {
+  height: 65vh;
+}
+
+.txthalf {
+  width: 50vw;
+  padding: 15px;
+  /* background-image: linear-gradient(rgba(153, 153, 153,0.5), rgba(153, 153, 153,0.5)); */
+  /* background-color: #dec699; */
+  /* color: #436f78; */
+  color: black;
+}
+
+.txthalf2 {
+  padding: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .title {
+  font-size: 5em;
+  font-family: "lust-sans";
+  font-weight: 500;
+  margin-bottom: 0px;
+  color: #436f78;
+  margin-left: 5vw;
+} */
+
+.p {
+  font-weight: 500;
+  margin-left: 5vw;
+  color: #436f78;
+  font-family: "lust-sans";
+  font-size: 5em;
+  display: inline-block;
+  /* margin: 0px; */
+  transform: rotateX(90deg);
+  animation: hhhh .2s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+
+.r {
+  font-weight: 500;
+  color: #436f78;
+  font-family: "lust-sans";
+  font-size: 5em;
+  display: inline-block;
+  /* margin: 0px; */
+  transform: rotateX(90deg);
+  animation: hhhh .2s;
+  animation-delay: 2.3s;
+  animation-fill-mode: forwards;
+}
+
+.i {
+  font-weight: 500;
+  color: #436f78;
+  font-family: "lust-sans";
+  font-size: 5em;
+  display: inline-block;
+  /* margin: 0px; */
+  transform: rotateX(90deg);
+  animation: hhhh .2s;
+  animation-delay: 2.7s;
+  animation-fill-mode: forwards;
+}
+
+.m {
+  font-weight: 500;
+  color: #436f78;
+  font-family: "lust-sans";
+  font-size: 5em;
+  display: inline-block;
+  /* margin: 0px; */
+  transform: rotateX(90deg);
+  animation: hhhh .2s;
+  animation-delay: 3.1s;
+  animation-fill-mode: forwards;
+}
+
+.a {
+  font-weight: 500;
+  color: #436f78;
+  font-family: "lust-sans";
+  font-size: 5em;
+  display: inline-block;
+  /* margin: 0px; */
+  transform: rotateX(90deg);
+  animation: hhhh .2s;
+  animation-delay: 3.4s;
+  animation-fill-mode: forwards;
+}
+
+.subtitle {
+  line-height: 0.5;
+  font-size: 2em;
+  margin-top: 0px;
+  margin-bottom: 40px;
+  font-family: 'lust-sans';
+  font-weight: bolder;
+  color: #436f78;
+  margin-left: 5vw;
+}
+
+.yatll {
+  font-size: 2vw;
+  font-family: "lust-sans";
+  font-style: italic;
+  color: #436f78;
+  margin-left: 5vw;
+}
+
+.lorem2 {
+  margin-top: 0px;
+  font-size: 2.2vw;
+  font-family: Montserrat;
+  padding: 1vw;
+  /* background-image: linear-gradient(rgba(204, 204, 204,0.5), rgba(204, 204, 204,0.5)); */
+  background-color: white;
+  border: 20px solid rgba(204, 204, 204);
+}
+
+.span {
+  color: #436f78;
+  font-family: "lust-sans";
+  font-style: italic;
+}
+
+.imghalf {
+  width: 50vw;
+}
+
+.contactinfo {
+  margin-top: 15px;
+  height: 30vh;
+  width: 100%;
+  background-color: #436f78;
+  font-family: Montserrat;
+  display: flex;
+  flex-direction: row;
+}
+
+.infoleft {
+  color: white;
+  font-size: 1.7vw;
+  box-sizing: border-box;
+  padding: 35px;
+  display: inline-block;
+  /* height: 30vh; */
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #dec699; */
+  /* margin: 1vh; */
+
+}
+
+.inforight {
+  font-size: 1.7vw;
+  line-height: 0.4;
+  display: inline-block;
+  /* height: 30vh; */
+  /* width: auto; */
+  /* background-color: #dec699; */
+  padding-top: 35px;
+  width: 30%;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  color:  #dec699;
+  border: 7px solid #dec699;
+  background-color: #436f78;
+  margin: auto;
+  padding: 20px;
+  /* border: 1px solid #888; */
+  width: 70%;
+  height: 85%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-size: 3vh;
+  /* -ms-overflow-style: none;
+  scrollbar-width: none; */
+}
+
+/* .modal-content::-webkit-scrollbar {
+  display: none;
+} */
+
+.ourbiotxt {
+  font-size: 5vh;
+  margin-bottom: 0px;
+}
+
+.modaltxt {
+  margin-top: 0px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.myBtn {
+  padding-left: 1vw;
+  padding-right: 1vw;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: #dec699;
+  font-size: 4vh;
+  background-image: linear-gradient(rgba(67, 111, 120, 0.8), rgba(67, 111, 120, 0.8));
+  width: auto;
+  height: 7vh;
+  cursor: pointer;
+  /* display: inline-block; */
+  border: 3px solid #dec699;
+  transition: border 1s;
+}
+
+.myBtn:hover {
+  /* border: 2px solid black; */
+  background-image: linear-gradient(rgba(67, 111, 120, 0.3), rgba(67, 111, 120, 0.3));
+  /* animation: slide 2s forward; */
+}
+
+.myBtn1 {
+  margin-left: 5vw;
+  margin-right: 2vw;
+}
+
+@keyframes hhhh {
+  from {transform: rotateX(90deg);}
+  to{transform: rotateX(0deg);}
+}
+
+
+                                        /* property page */
+
+
+#search-bar {
+  width: 100%;
+  height: 7vh;
+  font-size: 1.3em;
+  /* padding: 11px; */
+  border: 3px solid #ddd;
+  border-radius: 15px;
+}
+
+.searchbar {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15vh;
+  width: 60%;
+  height: auto;
+}
+
+.checkbox {
+  margin-top: 3vh;
+  text-align: center;
+  font-size: 3vh;
+}
+
+#checkpa {
+  height: 3vh;
+  width: 3vw;
+}
+
+#checknj {
+  height: 3vh;
+  width: 3vw;
+}
+
+
+.properties {
+  height: auto;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  margin-right: auto;
+  margin-left: auto;
+  border: 2px solid black;
+  margin-bottom: 5vh;
+}
+
+.propertyimg {
+  background-image: url('prima5.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 50%;
+  height: 40vh;
+}
+
+.propertyinfo {
+  width: 50%;
+  height: 40vh;
+  display: flex;
+  /* justify-content: center; */
+  text-align: center;
+  align-items: center;
+  font-size: 2em;
+  font-family: Montserrat;
+}
+
+#sttbtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #436f78;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
