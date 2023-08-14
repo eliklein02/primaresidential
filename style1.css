@@ -363,7 +363,31 @@ body {
   margin-bottom: 5vh;
 }
 
-.propertyimg {
+.propertyimg1723 {
+  background-image: url('1723main.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 50%;
+  height: 40vh;
+}
+
+.propertyimg2630 {
+  background-image: url('2630.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 50%;
+  height: 40vh;
+}
+
+.propertyimg209 {
+  background-image: url('prima5.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 50%;
+  height: 40vh;
+}
+
+.propertyimg1816 {
   background-image: url('prima5.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -380,6 +404,7 @@ body {
   align-items: center;
   font-size: 2em;
   font-family: Montserrat;
+  padding: 5vw;
 }
 
 #sttbtn {
