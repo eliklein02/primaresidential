@@ -101,6 +101,10 @@ body:before {
   margin-right: auto;
 }
 
+a.buttonsdiv {
+  text-decoration: none;
+}
+
 .myBtn {
   padding-left: 1vw;
   padding-right: 1vw;
@@ -194,40 +198,49 @@ body:before {
                                           /* property page */
 
 
-#search-bar {
-width: 100%;
-height: 7vh;
-font-size: 1.3em;
-/* padding: 11px; */
-border: 3px solid #ddd;
-border-radius: 15px;
+#search-bar-m {
+  text-align: center;
+  width: 100%;
+  height: 7vh;
+  font-size: 1.1em;
+  /* padding: 11px; */
+  border: 3px solid #ddd;
+  border-radius: 15px;
+  margin-bottom: 1.5vh;
 }
 
 .searchbar {
-margin-left: auto;
-margin-right: auto;
-margin-bottom: 10vh;
-width: 75%;
-height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10vh;
+  width: 75%;
+  height: auto;
+  color: #436f78;
+
 }
 
+.checkbox {
+  text-align: center;
+  font-size: 1.4em;
+}
 
 .properties {
-height: 25vh;
-width: 90%;
-display: flex;
-flex-direction: row;
-margin-right: auto;
-margin-left: auto;
-border: 2px solid #436f78;
-margin-bottom: 5vh;
-border-radius: 15px;
+  height: 25vh;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  margin-right: auto;
+  margin-left: auto;
+  border: 2px solid #436f78;
+  margin-bottom: 5vh;
+  border-radius: 15px;
 }
 
 .propertyimg1723 {
   background-image: url('1723main.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   width: 50%;
   height: auto;
   border-radius: 15px;
@@ -237,6 +250,7 @@ border-radius: 15px;
   background-image: url('2630.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   width: 50%;
   height: auto;
   border-radius: 15px;
@@ -246,6 +260,7 @@ border-radius: 15px;
   background-image: url('prima5.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   width: 50%;
   height: auto;
   border-radius: 15px;
@@ -255,6 +270,7 @@ border-radius: 15px;
   background-image: url('prima5.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   width: 50%;
   height: auto;
   border-radius: 15px;
@@ -269,4 +285,12 @@ text-align: center;
 align-items: center;
 font-size: 1.5em;
 font-family: Montserrat;
+}
+
+#pa2 {
+  margin-bottom: 5vh;
+}
+
+#p2 {
+  margin-bottom: 5vh;
 }

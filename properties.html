@@ -29,6 +29,7 @@
         <input type="text" id="search-bar" placeholder="Search by address, city, or state..." title="Type in a category">
         <div class="checkbox">
           Click to see our PA properties:<input type="checkbox" id='checkpa' onclick="checkboxes()">
+          <br>
           Click to see our NJ properties:<input type="checkbox" id='checknj' onclick="checkboxes2()">
         </div>
       </div>
@@ -65,7 +66,7 @@
       </div>
 
 
-      <script type="text/javascript">
+      <!-- <script type="text/javascript">
         const searchInput = document.getElementById('search-bar');
 
   // Attach an event listener to the input element
@@ -134,7 +135,7 @@ function scrollFunction() {
     mybutton.style.display = "none";
   }
 }
-      </script>
+      </script> -->
     </div>
 
 
@@ -153,9 +154,14 @@ function scrollFunction() {
       <div class="emptydiv">
       </div>
       <div class="searchbar">
-        <input type="text" id="search-bar" placeholder="Search by address, city, or state..." title="Type in a category">
+        <input type="text" id="search-bar-m" placeholder="Search by address, city, or state..." title="Type in a category">
+        <div class="checkbox">
+          Click to see our PA properties:<input type="checkbox" id='checkp' onclick="checkboxesm()">
+          <br>
+          Click to see our NJ properties:<input type="checkbox" id='checkn' onclick="checkboxesm2()">
+        </div>
       </div>
-      <div class="properties">
+      <div class="properties pa" id="p1">
         <div class="propertyimg1723">
         </div>
         <div class="propertyinfo">
@@ -163,7 +169,7 @@ function scrollFunction() {
         </div>
       </div>
 
-      <div class="properties">
+      <div class="properties nj" id="n1">
         <div class="propertyimg2630">
         </div>
         <div class="propertyinfo">
@@ -171,7 +177,7 @@ function scrollFunction() {
         </div>
       </div>
 
-      <div class="properties">
+      <div class="properties nj" id="n2">
         <div class="propertyimg209">
         </div>
         <div class="propertyinfo">
@@ -179,7 +185,7 @@ function scrollFunction() {
         </div>
       </div>
 
-      <div class="properties">
+      <div class="properties pa" id="p2">
         <div class="propertyimg1816">
         </div>
         <div class="propertyinfo">
@@ -210,5 +216,136 @@ div.style.display = 'none'; // Hide the div
 });
 
     </script> -->
+    <script type="text/javascript">
+      const searchInput = document.getElementById('search-bar');
+
+// Attach an event listener to the input element
+searchInput.addEventListener('input', function() {
+const searchText = this.value.toLowerCase(); // Retrieve the search text
+
+// Iterate through each div element
+const divs = document.querySelectorAll('.properties');
+divs.forEach(function(div) {
+const divText = div.textContent.toLowerCase(); // Get the div's text content
+
+// Check if the div's text content contains the search text
+if (divText.includes(searchText)) {
+div.style.display = 'flex'; // Show the div
+} else {
+div.style.display = 'none'; // Hide the div
+}
+});
+});
+
+// for mobile searchbar
+
+const searchInputmob = document.getElementById('search-bar-m');
+
+// Attach an event listener to the input element
+searchInputmob.addEventListener('input', function() {
+const searchText = this.value.toLowerCase(); // Retrieve the search text
+
+// Iterate through each div element
+const divs = document.querySelectorAll('.properties');
+divs.forEach(function(div) {
+const divText = div.textContent.toLowerCase(); // Get the div's text content
+
+// Check if the div's text content contains the search text
+if (divText.includes(searchText)) {
+div.style.display = 'flex'; // Show the div
+} else {
+div.style.display = 'none'; // Hide the div
+}
+});
+});
+
+// for checkboxes
+
+function checkboxes() {
+
+  var checkpa = document.getElementById('checkpa');
+  var checknj = document.getElementById('checknj');
+  var njprops = document.getElementsByClassName('nj');
+  var paprops = document.getElementsByClassName('pa');
+  var allprops = document.getElementsByClassName('properties');
+
+  if (checkpa.checked == true) {
+    document.getElementById('nj').style.display = 'none';
+    document.getElementById('nj2').style.display = 'none';
+  }
+  else if (checkpa.checked == false) {
+    document.getElementById('nj').style.display = 'flex';
+    document.getElementById('nj2').style.display = 'flex';
+  }
+}
+
+function checkboxes2() {
+
+  var checkpa = document.getElementById('checkpa');
+  var checknj = document.getElementById('checknj');
+  var njprops = document.getElementsByClassName('nj');
+  var paprops = document.getElementsByClassName('pa');
+  var allprops = document.getElementsByClassName('properties');
+
+  if (checknj.checked == true) {
+    document.getElementById('pa').style.display = 'none';
+    document.getElementById('pa2').style.display = 'none';
+  }
+  else if (checknj.checked == false) {
+    document.getElementById('pa').style.display = 'flex';
+    document.getElementById('pa2').style.display = 'flex';
+  }
+}
+
+// for mobile checkboxes
+function checkboxesm() {
+
+  var checkpa = document.getElementById('checkp');
+  var checknj = document.getElementById('checkn');
+  var njprops = document.getElementsByClassName('nj');
+  var paprops = document.getElementsByClassName('pa');
+  var allprops = document.getElementsByClassName('properties');
+
+  if (checkpa.checked == true) {
+    document.getElementById('n1').style.display = 'none';
+    document.getElementById('n2').style.display = 'none';
+  }
+  else if (checkpa.checked == false) {
+    document.getElementById('n1').style.display = 'flex';
+    document.getElementById('n2').style.display = 'flex';
+  }
+}
+
+function checkboxesm2() {
+
+  var checkpa = document.getElementById('checkp');
+  var checknj = document.getElementById('checkn');
+  var njprops = document.getElementsByClassName('nj');
+  var paprops = document.getElementsByClassName('pa');
+  var allprops = document.getElementsByClassName('properties');
+
+  if (checknj.checked == true) {
+    document.getElementById('p1').style.display = 'none';
+    document.getElementById('p2').style.display = 'none';
+  }
+  else if (checknj.checked == false) {
+    document.getElementById('p1').style.display = 'flex';
+    document.getElementById('p2').style.display = 'flex';
+  }
+}
+
+let mybutton = document.getElementById("sttbtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+  mybutton.style.display = "block";
+} else {
+  mybutton.style.display = "none";
+}
+}
+    </script>
   </body>
 </html>
