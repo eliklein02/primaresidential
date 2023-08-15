@@ -33,7 +33,7 @@
           Click to see our NJ properties:<input type="checkbox" id='checknj' onclick="checkboxes2()">
         </div>
       </div>
-      <div class="properties pa" id = "pa">
+      <div class="properties properties1723 pa" id = "pa">
         <div class="propertyimg1723">
         </div>
         <div class="propertyinfo">
@@ -41,7 +41,7 @@
         </div>
       </div>
 
-      <div class="properties nj" id = "nj">
+      <div class="properties properties2630 nj" id = "nj">
         <div class="propertyimg2630">
         </div>
         <div class="propertyinfo">
@@ -219,133 +219,133 @@ div.style.display = 'none'; // Hide the div
     <script type="text/javascript">
       const searchInput = document.getElementById('search-bar');
 
-// Attach an event listener to the input element
-searchInput.addEventListener('input', function() {
-const searchText = this.value.toLowerCase(); // Retrieve the search text
+      // Attach an event listener to the input element
+      searchInput.addEventListener('input', function() {
+      const searchText = this.value.toLowerCase(); // Retrieve the search text
 
-// Iterate through each div element
-const divs = document.querySelectorAll('.properties');
-divs.forEach(function(div) {
-const divText = div.textContent.toLowerCase(); // Get the div's text content
+      // Iterate through each div element
+      const divs = document.querySelectorAll('.properties');
+      divs.forEach(function(div) {
+      const divText = div.textContent.toLowerCase(); // Get the div's text content
 
-// Check if the div's text content contains the search text
-if (divText.includes(searchText)) {
-div.style.display = 'flex'; // Show the div
-} else {
-div.style.display = 'none'; // Hide the div
-}
-});
-});
+      // Check if the div's text content contains the search text
+      if (divText.includes(searchText)) {
+      div.style.display = 'flex'; // Show the div
+      } else {
+      div.style.display = 'none'; // Hide the div
+      }
+      });
+      });
 
-// for mobile searchbar
+      // for mobile searchbar
 
-const searchInputmob = document.getElementById('search-bar-m');
+      const searchInputmob = document.getElementById('search-bar-m');
 
-// Attach an event listener to the input element
-searchInputmob.addEventListener('input', function() {
-const searchText = this.value.toLowerCase(); // Retrieve the search text
+      // Attach an event listener to the input element
+      searchInputmob.addEventListener('input', function() {
+      const searchText = this.value.toLowerCase(); // Retrieve the search text
 
-// Iterate through each div element
-const divs = document.querySelectorAll('.properties');
-divs.forEach(function(div) {
-const divText = div.textContent.toLowerCase(); // Get the div's text content
+      // Iterate through each div element
+      const divs = document.querySelectorAll('.properties');
+      divs.forEach(function(div) {
+      const divText = div.textContent.toLowerCase(); // Get the div's text content
 
-// Check if the div's text content contains the search text
-if (divText.includes(searchText)) {
-div.style.display = 'flex'; // Show the div
-} else {
-div.style.display = 'none'; // Hide the div
-}
-});
-});
+      // Check if the div's text content contains the search text
+      if (divText.includes(searchText)) {
+      div.style.display = 'flex'; // Show the div
+      } else {
+      div.style.display = 'none'; // Hide the div
+      }
+      });
+      });
 
-// for checkboxes
+      // for checkboxes
 
-function checkboxes() {
+      function checkboxes() {
 
-  var checkpa = document.getElementById('checkpa');
-  var checknj = document.getElementById('checknj');
-  var njprops = document.getElementsByClassName('nj');
-  var paprops = document.getElementsByClassName('pa');
-  var allprops = document.getElementsByClassName('properties');
+        var checkpa = document.getElementById('checkpa');
+        var checknj = document.getElementById('checknj');
+        var njprops = document.getElementsByClassName('nj');
+        var paprops = document.getElementsByClassName('pa');
+        var allprops = document.getElementsByClassName('properties');
 
-  if (checkpa.checked == true) {
-    document.getElementById('nj').style.display = 'none';
-    document.getElementById('nj2').style.display = 'none';
-  }
-  else if (checkpa.checked == false) {
-    document.getElementById('nj').style.display = 'flex';
-    document.getElementById('nj2').style.display = 'flex';
-  }
-}
+        if (checkpa.checked == true) {
+          document.getElementById('nj').style.display = 'none';
+          document.getElementById('nj2').style.display = 'none';
+        }
+        else if (checkpa.checked == false) {
+          document.getElementById('nj').style.display = 'flex';
+          document.getElementById('nj2').style.display = 'flex';
+        }
+      }
 
-function checkboxes2() {
+      function checkboxes2() {
 
-  var checkpa = document.getElementById('checkpa');
-  var checknj = document.getElementById('checknj');
-  var njprops = document.getElementsByClassName('nj');
-  var paprops = document.getElementsByClassName('pa');
-  var allprops = document.getElementsByClassName('properties');
+        var checkpa = document.getElementById('checkpa');
+        var checknj = document.getElementById('checknj');
+        var njprops = document.getElementsByClassName('nj');
+        var paprops = document.getElementsByClassName('pa');
+        var allprops = document.getElementsByClassName('properties');
 
-  if (checknj.checked == true) {
-    document.getElementById('pa').style.display = 'none';
-    document.getElementById('pa2').style.display = 'none';
-  }
-  else if (checknj.checked == false) {
-    document.getElementById('pa').style.display = 'flex';
-    document.getElementById('pa2').style.display = 'flex';
-  }
-}
+        if (checknj.checked == true) {
+          document.getElementById('pa').style.display = 'none';
+          document.getElementById('pa2').style.display = 'none';
+        }
+        else if (checknj.checked == false) {
+          document.getElementById('pa').style.display = 'flex';
+          document.getElementById('pa2').style.display = 'flex';
+        }
+      }
 
-// for mobile checkboxes
-function checkboxesm() {
+      // for mobile checkboxes
+      function checkboxesm() {
 
-  var checkpa = document.getElementById('checkp');
-  var checknj = document.getElementById('checkn');
-  var njprops = document.getElementsByClassName('nj');
-  var paprops = document.getElementsByClassName('pa');
-  var allprops = document.getElementsByClassName('properties');
+        var checkpa = document.getElementById('checkp');
+        var checknj = document.getElementById('checkn');
+        var njprops = document.getElementsByClassName('nj');
+        var paprops = document.getElementsByClassName('pa');
+        var allprops = document.getElementsByClassName('properties');
 
-  if (checkpa.checked == true) {
-    document.getElementById('n1').style.display = 'none';
-    document.getElementById('n2').style.display = 'none';
-  }
-  else if (checkpa.checked == false) {
-    document.getElementById('n1').style.display = 'flex';
-    document.getElementById('n2').style.display = 'flex';
-  }
-}
+        if (checkpa.checked == true) {
+          document.getElementById('n1').style.display = 'none';
+          document.getElementById('n2').style.display = 'none';
+        }
+        else if (checkpa.checked == false) {
+          document.getElementById('n1').style.display = 'flex';
+          document.getElementById('n2').style.display = 'flex';
+        }
+      }
 
-function checkboxesm2() {
+      function checkboxesm2() {
 
-  var checkpa = document.getElementById('checkp');
-  var checknj = document.getElementById('checkn');
-  var njprops = document.getElementsByClassName('nj');
-  var paprops = document.getElementsByClassName('pa');
-  var allprops = document.getElementsByClassName('properties');
+        var checkpa = document.getElementById('checkp');
+        var checknj = document.getElementById('checkn');
+        var njprops = document.getElementsByClassName('nj');
+        var paprops = document.getElementsByClassName('pa');
+        var allprops = document.getElementsByClassName('properties');
 
-  if (checknj.checked == true) {
-    document.getElementById('p1').style.display = 'none';
-    document.getElementById('p2').style.display = 'none';
-  }
-  else if (checknj.checked == false) {
-    document.getElementById('p1').style.display = 'flex';
-    document.getElementById('p2').style.display = 'flex';
-  }
-}
+        if (checknj.checked == true) {
+          document.getElementById('p1').style.display = 'none';
+          document.getElementById('p2').style.display = 'none';
+        }
+        else if (checknj.checked == false) {
+          document.getElementById('p1').style.display = 'flex';
+          document.getElementById('p2').style.display = 'flex';
+        }
+      }
 
-let mybutton = document.getElementById("sttbtn");
+      let mybutton = document.getElementById("sttbtn");
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
 
-function scrollFunction() {
-if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-  mybutton.style.display = "block";
-} else {
-  mybutton.style.display = "none";
-}
-}
+      function scrollFunction() {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+      }
     </script>
   </body>
 </html>
