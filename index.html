@@ -49,11 +49,110 @@
             exceptional results and drive long-term success for our clients</p>
         </div>
       </div>
-      <!-- <div class="whoknows"> -->
+      <div id="fmodal" class="fmodal">
+        <div class="fmodalx" onclick="formmodalx()">
+          <i class="material-icons" style="font-size:48px">close</i>
+        </div>
+        <iframe
+          id="JotFormIFrame-232276593308158"
+          title="General Inquiry Contact Form"
+          onload="window.parent.scrollTo(0,0)"
+          allowtransparency="true"
+          allowfullscreen="true"
+          allow="geolocation; microphone; camera"
+          src="https://form.jotform.com/232276593308158"
+          frameborder="0"
+          style="min-width:100%;max-width:100%;height:539px;border:none;"
+          scrolling="no">
+          </iframe>
+          <script type="text/javascript">
+            var ifr = document.getElementById("JotFormIFrame-232276593308158");
+            if (ifr) {
+              var src = ifr.src;
+              var iframeParams = [];
+              if (window.location.href && window.location.href.indexOf("?") > -1) {
+                iframeParams = iframeParams.concat(window.location.href.substr(window.location.href.indexOf("?") + 1).split('&'));
+              }
+              if (src && src.indexOf("?") > -1) {
+                iframeParams = iframeParams.concat(src.substr(src.indexOf("?") + 1).split("&"));
+                src = src.substr(0, src.indexOf("?"))
+              }
+              iframeParams.push("isIframeEmbed=1");
+              ifr.src = src + "?" + iframeParams.join('&');
+            }
+            window.handleIFrameMessage = function(e) {
+              if (typeof e.data === 'object') { return; }
+              var args = e.data.split(":");
+              if (args.length > 2) { iframe = document.getElementById("JotFormIFrame-" + args[(args.length - 1)]); } else { iframe = document.getElementById("JotFormIFrame"); }
+              if (!iframe) { return; }
+              switch (args[0]) {
+                case "scrollIntoView":
+                  iframe.scrollIntoView();
+                  break;
+                case "setHeight":
+                  iframe.style.height = args[1] + "px";
+                  if (!isNaN(args[1]) && parseInt(iframe.style.minHeight) > parseInt(args[1])) {
+                    iframe.style.minHeight = args[1] + "px";
+                  }
+                  break;
+                case "collapseErrorPage":
+                  if (iframe.clientHeight > window.innerHeight) {
+                    iframe.style.height = window.innerHeight + "px";
+                  }
+                  break;
+                case "reloadPage":
+                  window.location.reload();
+                  break;
+                case "loadScript":
+                  if( !window.isPermitted(e.origin, ['jotform.com', 'jotform.pro']) ) { break; }
+                  var src = args[1];
+                  if (args.length > 3) {
+                      src = args[1] + ':' + args[2];
+                  }
+                  var script = document.createElement('script');
+                  script.src = src;
+                  script.type = 'text/javascript';
+                  document.body.appendChild(script);
+                  break;
+                case "exitFullscreen":
+                  if      (window.document.exitFullscreen)        window.document.exitFullscreen();
+                  else if (window.document.mozCancelFullScreen)   window.document.mozCancelFullScreen();
+                  else if (window.document.mozCancelFullscreen)   window.document.mozCancelFullScreen();
+                  else if (window.document.webkitExitFullscreen)  window.document.webkitExitFullscreen();
+                  else if (window.document.msExitFullscreen)      window.document.msExitFullscreen();
+                  break;
+              }
+              var isJotForm = (e.origin.indexOf("jotform") > -1) ? true : false;
+              if(isJotForm && "contentWindow" in iframe && "postMessage" in iframe.contentWindow) {
+                var urls = {"docurl":encodeURIComponent(document.URL),"referrer":encodeURIComponent(document.referrer)};
+                iframe.contentWindow.postMessage(JSON.stringify({"type":"urls","value":urls}), "*");
+              }
+            };
+            window.isPermitted = function(originUrl, whitelisted_domains) {
+              var url = document.createElement('a');
+              url.href = originUrl;
+              var hostname = url.hostname;
+              var result = false;
+              if( typeof hostname !== 'undefined' ) {
+                whitelisted_domains.forEach(function(element) {
+                    if( hostname.slice((-1 * element.length - 1)) === '.'.concat(element) ||  hostname === element ) {
+                        result = true;
+                    }
+                });
+                return result;
+              }
+            };
+            if (window.addEventListener) {
+              window.addEventListener("message", handleIFrameMessage, false);
+            } else if (window.attachEvent) {
+              window.attachEvent("onmessage", handleIFrameMessage);
+            }
+          </script>
+        </div>
       <div class="parallax1">
       </div>
       <div class="afterscroll1" id="about">
-        <div class="txthalf" data-aos='fade-right'>
+        <div class="txthalf" data-aos='fade'>
           <!-- <p class="title"> -->
             <div class="p">P</div>
             <div class="r">R</div>
@@ -66,15 +165,15 @@
           <div id="myBtn" class="myBtn myBtn1">About</div>
           <a href = "properties.html"><div class="myBtn">Properties</div></a>
         </div>
-        <div class="imghalf" data-aos='fade-left'>
+        <div class="imghalf" data-aos='fade'>
           <img src="prima6.jpg" alt="Prima 6" height="100%" width="100%;">
         </div>
       </div>
       <div class="afterscroll1">
-        <div class="imghalf" data-aos='fade-right'>
+        <div class="imghalf" data-aos='fade-down'>
           <img src="prima4.jpg" alt="Prima 4" height="100%" width="100%;">
         </div>
-        <div class="txthalf txthalf2" data-aos='fade-left'>
+        <div class="txthalf txthalf2" data-aos='fade-down'>
           <p class="lorem2">Your comprehensive solution for all your proprty managemenet needs.</p>
         </div>
       </div>
@@ -87,7 +186,6 @@
           <img src="prima3.jpg" alt="Prima 3" height="100%" width="100%;">
         </div>
       </div>
-      <!-- </div> --> -->
       <div class="contactinfo" id="contact" data-aos='slide-up'>
         <div class="infoleft">
           <p>Thank you for visiting PRIMA RESIDENTIAL online today. We encourage you to contact us by phone or email with any questions or comments you may have. We look forward to hearing from you soon.</p>
@@ -105,7 +203,13 @@
             Email:
           </p>
           <a href="mailto:office@primaresidential.com">Office@primaresidential.com</a>
-        </div>
+          <div class="fbtndiv">
+            <i class="material-icons">send</i>
+            Send us a message:<br>
+            <button class="fbtn" onclick="formmodal()">
+              Message
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -116,14 +220,9 @@
     <div class="smallscreen">
       <div class="emptydiv">
       </div>
-      <!-- <div class="afterempty">
-        <p class="primatxt">PRIMA</p>
-        <p class="restxt">RESIDENTIAL</p>
-        <p class="yattxt">your access to luxury living</p>
-      </div> -->
-      <div class="firstimg" data-aos="flip-right">
+      <div class="firstimg" data-aos="fade-up">
       </div>
-      <div class="afterfi" data-aos="flip-left">
+      <div class="afterfi" data-aos="fade-down">
         <div class="yatll">
           your access to <br>luxury living
         </div>
@@ -131,16 +230,16 @@
           <a href="properties.html"><div id="propbtn" class="myBtn myBtn1">Properties</div></a>
         </div>
       </div>
-      <div class="secondimg" data-aos="flip-right">
+      <div class="secondimg" data-aos="fade-up">
       </div>
-      <div class="aftersi" data-aos="flip-left">
+      <div class="aftersi" data-aos="fade-down">
         <i class="material-icons" style="font-size:10vh;px;color:#436f78">business</i>
         <br>
         Your comprehensive solution for all your proprty managemenet needs.
       </div>
-      <div class="thirdimg" data-aos="flip-right">
+      <div class="thirdimg" data-aos="fade-up">
       </div>
-      <div id="afterti" class="afterti" data-aos="flip-down">
+      <div id="afterti" class="afterti" data-aos="fade-down">
         <i class="material-icons" style="font-size:10vh;color: #436f78">handshake</i>
         <br>
         Empowering your business with our expertise in strategic planning, finance and asset managemenet, and tenant relations.
@@ -167,10 +266,28 @@
 
 
     <!-- <script src="script1.js"></script> -->
+
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
 
+                  // form model
+      var fmodal = document.getElementById('fmodal');
+
+      var fbtn = document.getElementById('fbtn');
+
+      function formmodal() {
+        fmodal.style.display="block"
+      };
+
+      function formmodalx() {
+        fmodal.style.display="none"
+      };
+
+
+
+                  // about us modal
       var modal = document.getElementById("myModal");
       // Get the button that opens the modal
       var btn = document.getElementById("myBtn");
