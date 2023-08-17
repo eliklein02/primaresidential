@@ -49,11 +49,12 @@
             exceptional results and drive long-term success for our clients</p>
         </div>
       </div>
-      <div id="fmodal" class="fmodal">
+      <!-- <div id="fmodal" class="fmodal">
         <div class="fmodalx" onclick="formmodalx()">
           <i class="material-icons" style="font-size:48px">close</i>
         </div>
         <iframe
+          class="jfiframe"
           id="JotFormIFrame-232276593308158"
           title="General Inquiry Contact Form"
           onload="window.parent.scrollTo(0,0)"
@@ -62,7 +63,7 @@
           allow="geolocation; microphone; camera"
           src="https://form.jotform.com/232276593308158"
           frameborder="0"
-          style="min-width:100%;max-width:100%;height:539px;border:none;"
+          style="min-width:100%;max-width:100%;min-height:100vh;max-height:100vh;border:none;"
           scrolling="no">
           </iframe>
           <script type="text/javascript">
@@ -148,7 +149,13 @@
               window.attachEvent("onmessage", handleIFrameMessage);
             }
           </script>
+        </div> -->
+      <div id="fmodal" class="fmodal">
+        <div class="fmodalx" onclick="formmodalx()">
+          <i class="material-icons" style="font-size:48px">close</i>
         </div>
+        <iframe src="contactform.html" class="jfiframe"></iframe>
+      </div>
       <div class="parallax1">
       </div>
       <div class="afterscroll1" id="about">
@@ -209,6 +216,7 @@
             <button class="fbtn" onclick="formmodal()">
               Message
             </button>
+            <!-- <a href="contactform.html" class="fbtn">Message</a> -->
           </div>
         </div>
       </div>
@@ -374,7 +382,7 @@
       var fbtn = document.getElementById('fbtn');
 
       function formmodal() {
-        fmodal.style.display="block"
+        fmodal.style.display="flex"
       };
 
       function formmodalx() {
