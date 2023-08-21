@@ -189,14 +189,13 @@ a.buttonsdiv {
 }
 
 .contactinfo {
-  width: 70%;
+  width: 90%;
   font-size: 3vh;
   margin-left: auto;
   margin-right: auto;
   font-family: Montserrat;
   text-align: center;
   color: #436f78;
-  margin-bottom: 5%;
 }
 
 .emailaddress {
@@ -300,4 +299,41 @@ font-family: Montserrat;
 
 #p2 {
   margin-bottom: 5vh;
+}
+
+.iframecontainer{
+  display: none;
+  width: 70%;
+  height: 70vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* .jfiframe {
+  width: 100%;
+  height: 100%;
+} */
+
+.fmodalmobile {
+  /* background-color: #dec699;
+  width: auto;
+  cursor: pointer;
+  font-size: 3vh; */
+  padding: 2vh;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: #dec699;
+  font-size: 4vh;
+  background-image: linear-gradient(rgba(67, 111, 120, 0.8), rgba(67, 111, 120, 0.8));
+  width: auto;
+  height: 7vh;
+  cursor: pointer;
+  /* display: inline-block; */
+  border: 3px solid #dec699;
+  margin-bottom: 5vh;
+}
+
+.uparrow {
+  display: none;
 }
