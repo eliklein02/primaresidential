@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <script src="script1.js" charset="utf-8"></script>
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js" charset="utf-8"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="prima1.jpg">
@@ -27,13 +26,18 @@
       </div>
       <div class="searchbar">
         <input type="text" id="search-bar" placeholder="Search by address, city, or state..." title="Type in a category">
-        <div class="checkbox">
-          Click to see our PA properties:<input type="checkbox" id='checkpa' onclick="checkboxes()">
-          <br>
-          Click to see our NJ properties:<input type="checkbox" id='checknj' onclick="checkboxes2()">
-        </div>
       </div>
-      <div class="properties properties1723 pa" id = "pa">
+      <div class="checkbox">
+          <select id="selector" class="hello" name="selector">
+            <option value="0" selected="selected">All</option>
+            <option value="1">New Jersey</option>
+            <option value="2">Pennsylvania</option>
+          </select>
+        <!-- Click to see our PA properties:<input type="checkbox" id='checkpa' onclick="checkboxes()">
+        <br>
+        Click to see our NJ properties:<input type="checkbox" id='checknj' onclick="checkboxes2()"> -->
+      </div>
+      <div class="properties pa" id = "penn pa paDiv1">
         <div class="propertyimg1723">
         </div>
         <div class="propertyinfo">
@@ -41,7 +45,7 @@
         </div>
       </div>
 
-      <div class="properties properties2630 nj" id = "nj">
+      <div class="properties nj" id = "jersey nj njDiv1">
         <div class="propertyimg2630">
         </div>
         <div class="propertyinfo">
@@ -49,7 +53,7 @@
         </div>
       </div>
 
-      <div class="properties nj" id = "nj2">
+      <div class="properties nj" id = "jersey2 nj2 njDiv2">
         <div class="propertyimg209">
         </div>
         <div class="propertyinfo">
@@ -57,85 +61,13 @@
         </div>
       </div>
 
-      <div class="properties pa" id="pa2">
+      <div class="properties pa" id = "penn2 pa2 paDiv2">
         <div class="propertyimg1816">
         </div>
         <div class="propertyinfo">
           1816 Cecil B. Moore Avenue, Philadelphia, PA
         </div>
       </div>
-
-
-      <!-- <script type="text/javascript">
-        const searchInput = document.getElementById('search-bar');
-
-  // Attach an event listener to the input element
-  searchInput.addEventListener('input', function() {
-  const searchText = this.value.toLowerCase(); // Retrieve the search text
-
-  // Iterate through each div element
-  const divs = document.querySelectorAll('.properties');
-  divs.forEach(function(div) {
-  const divText = div.textContent.toLowerCase(); // Get the div's text content
-
-  // Check if the div's text content contains the search text
-  if (divText.includes(searchText)) {
-  div.style.display = 'flex'; // Show the div
-  } else {
-  div.style.display = 'none'; // Hide the div
-  }
-  });
-  });
-
-  function checkboxes() {
-
-    var checkpa = document.getElementById('checkpa');
-    var checknj = document.getElementById('checknj');
-    var njprops = document.getElementsByClassName('nj');
-    var paprops = document.getElementsByClassName('pa');
-    var allprops = document.getElementsByClassName('properties');
-
-    if (checkpa.checked == true) {
-      document.getElementById('nj').style.display = 'none';
-      document.getElementById('nj2').style.display = 'none';
-    }
-    else if (checkpa.checked == false) {
-      document.getElementById('nj').style.display = 'flex';
-      document.getElementById('nj2').style.display = 'flex';
-    }
-  }
-
-  function checkboxes2() {
-
-    var checkpa = document.getElementById('checkpa');
-    var checknj = document.getElementById('checknj');
-    var njprops = document.getElementsByClassName('nj');
-    var paprops = document.getElementsByClassName('pa');
-    var allprops = document.getElementsByClassName('properties');
-
-    if (checknj.checked == true) {
-      document.getElementById('pa').style.display = 'none';
-      document.getElementById('pa2').style.display = 'none';
-    }
-    else if (checknj.checked == false) {
-      document.getElementById('pa').style.display = 'flex';
-      document.getElementById('pa2').style.display = 'flex';
-    }
-  }
-
-  let mybutton = document.getElementById("sttbtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-      </script> -->
     </div>
 
 
@@ -194,158 +126,44 @@ function scrollFunction() {
       </div>
     </div>
 
-    <!-- <script type="text/javascript">
-      const searchInput = document.getElementById('search-bar');
 
-// Attach an event listener to the input element
-searchInput.addEventListener('input', function() {
-const searchText = this.value.toLowerCase(); // Retrieve the search text
+    <script src="script111.js" charset="utf-8" defer></script>
+    <script type="text/javascript" defer>
+    document.getElementById("selector").addEventListener("change", function() {
+      var selectedOption = document.getElementById("selector").value;
+      var alloption1 = document.querySelector("#jersey\\ nj\\ njDiv1");
+      var alloption2 = document.querySelector("#penn\\ pa\\ paDiv1");
+      var alloption3 = document.querySelector("#penn2\\ pa2\\ paDiv2");
+      var alloption4 = document.querySelector("#jersey2\\ nj2\\ njDiv2");
 
-// Iterate through each div element
-const divs = document.querySelectorAll('.properties');
-divs.forEach(function(div) {
-const divText = div.textContent.toLowerCase(); // Get the div's text content
-
-// Check if the div's text content contains the search text
-if (divText.includes(searchText)) {
-div.style.display = 'flex'; // Show the div
-} else {
-div.style.display = 'none'; // Hide the div
-}
-});
-});
-
-    </script> -->
-    <script type="text/javascript">
-      const searchInput = document.getElementById('search-bar');
-
-      // Attach an event listener to the input element
-      searchInput.addEventListener('input', function() {
-      const searchText = this.value.toLowerCase(); // Retrieve the search text
-
-      // Iterate through each div element
-      const divs = document.querySelectorAll('.properties');
-      divs.forEach(function(div) {
-      const divText = div.textContent.toLowerCase(); // Get the div's text content
-
-      // Check if the div's text content contains the search text
-      if (divText.includes(searchText)) {
-      div.style.display = 'flex'; // Show the div
-      } else {
-      div.style.display = 'none'; // Hide the div
+      // Perform your desired action based on the selected option
+      switch(selectedOption) {
+        case "0":
+          alloption1.style.display="flex";
+          alloption2.style.display="flex";
+          alloption3.style.display="flex";
+          alloption4.style.display="flex";
+        break;
+        case "1":
+          alloption3.style.display="none";
+          alloption2.style.display="none";
+          alloption1.style.display="flex";
+          alloption4.style.display="flex";
+        break;
+        case "2":
+          alloption1.style.display="none";
+          alloption4.style.display="none";
+          alloption2.style.display="flex";
+          alloption3.style.display="flex";
+        break;
+        // default:
+        //   alloption1.style.display="flex";
+        //   alloption2.style.display="flex";
+        //   alloption3.style.display="flex";
+        //   alloption4.style.display="flex";
+        // break;
       }
-      });
-      });
-
-      // for mobile searchbar
-
-      const searchInputmob = document.getElementById('search-bar-m');
-
-      // Attach an event listener to the input element
-      searchInputmob.addEventListener('input', function() {
-      const searchText = this.value.toLowerCase(); // Retrieve the search text
-
-      // Iterate through each div element
-      const divs = document.querySelectorAll('.properties');
-      divs.forEach(function(div) {
-      const divText = div.textContent.toLowerCase(); // Get the div's text content
-
-      // Check if the div's text content contains the search text
-      if (divText.includes(searchText)) {
-      div.style.display = 'flex'; // Show the div
-      } else {
-      div.style.display = 'none'; // Hide the div
-      }
-      });
-      });
-
-      // for checkboxes
-
-      function checkboxes() {
-
-        var checkpa = document.getElementById('checkpa');
-        var checknj = document.getElementById('checknj');
-        var njprops = document.getElementsByClassName('nj');
-        var paprops = document.getElementsByClassName('pa');
-        var allprops = document.getElementsByClassName('properties');
-
-        if (checkpa.checked == true) {
-          document.getElementById('nj').style.display = 'none';
-          document.getElementById('nj2').style.display = 'none';
-        }
-        else if (checkpa.checked == false) {
-          document.getElementById('nj').style.display = 'flex';
-          document.getElementById('nj2').style.display = 'flex';
-        }
-      }
-
-      function checkboxes2() {
-
-        var checkpa = document.getElementById('checkpa');
-        var checknj = document.getElementById('checknj');
-        var njprops = document.getElementsByClassName('nj');
-        var paprops = document.getElementsByClassName('pa');
-        var allprops = document.getElementsByClassName('properties');
-
-        if (checknj.checked == true) {
-          document.getElementById('pa').style.display = 'none';
-          document.getElementById('pa2').style.display = 'none';
-        }
-        else if (checknj.checked == false) {
-          document.getElementById('pa').style.display = 'flex';
-          document.getElementById('pa2').style.display = 'flex';
-        }
-      }
-
-      // for mobile checkboxes
-      function checkboxesm() {
-
-        var checkpa = document.getElementById('checkp');
-        var checknj = document.getElementById('checkn');
-        var njprops = document.getElementsByClassName('nj');
-        var paprops = document.getElementsByClassName('pa');
-        var allprops = document.getElementsByClassName('properties');
-
-        if (checkpa.checked == true) {
-          document.getElementById('n1').style.display = 'none';
-          document.getElementById('n2').style.display = 'none';
-        }
-        else if (checkpa.checked == false) {
-          document.getElementById('n1').style.display = 'flex';
-          document.getElementById('n2').style.display = 'flex';
-        }
-      }
-
-      function checkboxesm2() {
-
-        var checkpa = document.getElementById('checkp');
-        var checknj = document.getElementById('checkn');
-        var njprops = document.getElementsByClassName('nj');
-        var paprops = document.getElementsByClassName('pa');
-        var allprops = document.getElementsByClassName('properties');
-
-        if (checknj.checked == true) {
-          document.getElementById('p1').style.display = 'none';
-          document.getElementById('p2').style.display = 'none';
-        }
-        else if (checknj.checked == false) {
-          document.getElementById('p1').style.display = 'flex';
-          document.getElementById('p2').style.display = 'flex';
-        }
-      }
-
-      let mybutton = document.getElementById("sttbtn");
-
-      // When the user scrolls down 20px from the top of the document, show the button
-      window.onscroll = function() {scrollFunction()};
-
-      function scrollFunction() {
-      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        mybutton.style.display = "block";
-      } else {
-        mybutton.style.display = "none";
-      }
-      }
+    });
     </script>
   </body>
 </html>

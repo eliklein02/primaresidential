@@ -355,7 +355,7 @@ button.fbtn:hover {
 .searchbar {
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 15vh;
+  margin-bottom: 5vh;
   width: 60%;
   height: auto;
   color: #436f78;
@@ -363,8 +363,11 @@ button.fbtn:hover {
 
 .checkbox {
   margin-top: 3vh;
+  margin-bottom: 5vh;
   text-align: center;
   font-size: 3vh;
+  display: flex;
+  justify-content: center;
 }
 
 #checkpa {
@@ -482,4 +485,13 @@ button.fbtn:hover {
   top: 0;
   right: 0;
   color: #dec699;
+}
+
+.hello {
+  color: #436f78;
+  background-color: #dec699;
+  font-size: 1em;
+  border-radius: 5px;
+  width: 20vw;
+  height: 5vh;
 }
