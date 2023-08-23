@@ -28,14 +28,11 @@
         <input type="text" id="search-bar" placeholder="Search by address, city, or state..." title="Type in a category">
       </div>
       <div class="checkbox">
-          <select id="selector" class="hello" name="selector">
-            <option value="0" selected="selected">All</option>
-            <option value="1">New Jersey</option>
-            <option value="2">Pennsylvania</option>
-          </select>
-        <!-- Click to see our PA properties:<input type="checkbox" id='checkpa' onclick="checkboxes()">
-        <br>
-        Click to see our NJ properties:<input type="checkbox" id='checknj' onclick="checkboxes2()"> -->
+        <select id="selector" class="hello" name="selector">
+          <option value="0" selected="selected">All</option>
+          <option value="1">New Jersey</option>
+          <option value="2">Pennsylvania</option>
+        </select>
       </div>
       <div class="properties pa" id = "penn pa paDiv1">
         <div class="propertyimg1723">
@@ -44,7 +41,6 @@
           1723 Ridge Avenue, Philadelphia, PA
         </div>
       </div>
-
       <div class="properties nj" id = "jersey nj njDiv1">
         <div class="propertyimg2630">
         </div>
@@ -52,7 +48,6 @@
           26-30 Main Street, Toms River, NJ
         </div>
       </div>
-
       <div class="properties nj" id = "jersey2 nj2 njDiv2">
         <div class="propertyimg209">
         </div>
@@ -60,7 +55,6 @@
           209 Center Street, Lakehurst, NJ
         </div>
       </div>
-
       <div class="properties pa" id = "penn2 pa2 paDiv2">
         <div class="propertyimg1816">
         </div>
@@ -87,11 +81,13 @@
       </div>
       <div class="searchbar">
         <input type="text" id="search-bar-m" placeholder="Search by address, city, or state..." title="Type in a category">
-        <div class="checkbox">
-          Click to see our PA properties:<input type="checkbox" id='checkp' onclick="checkboxesm()">
-          <br>
-          Click to see our NJ properties:<input type="checkbox" id='checkn' onclick="checkboxesm2()">
-        </div>
+      </div>
+      <div class="checkbox">
+        <select id="selectormobile" class="hello" name="selector">
+          <option class="option" value="0" selected="selected">All</option>
+          <option class="option" value="1">New Jersey</option>
+          <option class="option" value="2">Pennsylvania</option>
+        </select>
       </div>
       <div class="properties pa" id="p1">
         <div class="propertyimg1723">
@@ -100,7 +96,6 @@
           1723 Ridge Avenue, Philadelphia, PA
         </div>
       </div>
-
       <div class="properties nj" id="n1">
         <div class="propertyimg2630">
         </div>
@@ -108,7 +103,6 @@
           26-30 Main Street, Toms River, NJ
         </div>
       </div>
-
       <div class="properties nj" id="n2">
         <div class="propertyimg209">
         </div>
@@ -116,7 +110,6 @@
           209 Center Street, Lakehurst, NJ
         </div>
       </div>
-
       <div class="properties pa" id="p2">
         <div class="propertyimg1816">
         </div>
@@ -129,41 +122,88 @@
 
     <script src="script111.js" charset="utf-8" defer></script>
     <script type="text/javascript" defer>
-    document.getElementById("selector").addEventListener("change", function() {
-      var selectedOption = document.getElementById("selector").value;
-      var alloption1 = document.querySelector("#jersey\\ nj\\ njDiv1");
-      var alloption2 = document.querySelector("#penn\\ pa\\ paDiv1");
-      var alloption3 = document.querySelector("#penn2\\ pa2\\ paDiv2");
-      var alloption4 = document.querySelector("#jersey2\\ nj2\\ njDiv2");
+      document.getElementById("selector").addEventListener("change", function() {
+        // var selectedOption = document.getElementById("selector").value;
+        var selectedOption = document.querySelector("#selector").value;
+        var alloption1 = document.querySelector("#jersey\\ nj\\ njDiv1");
+        var alloption2 = document.querySelector("#penn\\ pa\\ paDiv1");
+        var alloption3 = document.querySelector("#penn2\\ pa2\\ paDiv2");
+        var alloption4 = document.querySelector("#jersey2\\ nj2\\ njDiv2");
 
-      // Perform your desired action based on the selected option
-      switch(selectedOption) {
-        case "0":
-          alloption1.style.display="flex";
-          alloption2.style.display="flex";
-          alloption3.style.display="flex";
-          alloption4.style.display="flex";
-        break;
-        case "1":
-          alloption3.style.display="none";
-          alloption2.style.display="none";
-          alloption1.style.display="flex";
-          alloption4.style.display="flex";
-        break;
-        case "2":
-          alloption1.style.display="none";
-          alloption4.style.display="none";
-          alloption2.style.display="flex";
-          alloption3.style.display="flex";
-        break;
-        // default:
-        //   alloption1.style.display="flex";
-        //   alloption2.style.display="flex";
-        //   alloption3.style.display="flex";
-        //   alloption4.style.display="flex";
-        // break;
+        // Perform your desired action based on the selected option
+        switch(selectedOption) {
+          case "0":
+            alloption1.style.display="flex";
+            alloption2.style.display="flex";
+            alloption3.style.display="flex";
+            alloption4.style.display="flex";
+          break;
+          case "1":
+            alloption3.style.display="none";
+            alloption2.style.display="none";
+            alloption1.style.display="flex";
+            alloption4.style.display="flex";
+          break;
+          case "2":
+            alloption1.style.display="none";
+            alloption4.style.display="none";
+            alloption2.style.display="flex";
+            alloption3.style.display="flex";
+          break;
+        }
+      });
+
+      document.getElementById("selectormobile").addEventListener("change", function() {
+        // var selectedOption = document.getElementById("selector").value;
+        var selectedOption = document.querySelector("#selectormobile").value;
+        var alloption1 = document.querySelector("#n1");
+        var alloption2 = document.querySelector("#p1");
+        var alloption3 = document.querySelector("#p2");
+        var alloption4 = document.querySelector("#n2");
+
+        // Perform your desired action based on the selected option
+        switch(selectedOption) {
+          case "0":
+            alloption1.style.display="flex";
+            alloption2.style.display="flex";
+            alloption3.style.display="flex";
+            alloption4.style.display="flex";
+          break;
+          case "1":
+            alloption3.style.display="none";
+            alloption2.style.display="none";
+            alloption1.style.display="flex";
+            alloption4.style.display="flex";
+          break;
+          case "2":
+            alloption1.style.display="none";
+            alloption4.style.display="none";
+            alloption2.style.display="flex";
+            alloption3.style.display="flex";
+          break;
+        }
+      });
+
+      window.addEventListener('load', function() {
+      setTimeout(function() {
+      const windowHeight = window.innerHeight;
+      const scrollAmount = windowHeight / 2;
+      const scrollDuration = 1000; // Adjust this value to control the duration of the scroll (in milliseconds)
+      const scrollInterval = 10; // Adjust this value to control the smoothness of the scroll
+
+      let currentPosition = 0;
+      const scrollStep = scrollAmount / (scrollDuration / scrollInterval);
+
+      const intervalId = setInterval(function() {
+      if (currentPosition >= scrollAmount) {
+      clearInterval(intervalId);
+      } else {
+      currentPosition += scrollStep;
+      window.scrollBy(0, scrollStep);
       }
-    });
+      }, scrollInterval);
+      }, 100);
+      });
     </script>
   </body>
 </html>

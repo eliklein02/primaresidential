@@ -220,7 +220,7 @@
         fmodal.style.display="none"
       };
 
-                // form show mobile
+      //           // form show mobile
       var fbtnmobile = document.getElementById('fmodalmobile');
       var fshowmobile = document.getElementById('iframecontainermobile');
       var uparrow = document.getElementById('uparrow');
@@ -259,30 +259,28 @@
         if (event.target == modal) {
           modal.style.display = "none";
         }
-      }
-
-      if (screen.width > 700) {
-        window.addEventListener('load', function() {
-        setTimeout(function() {
-        const windowHeight = window.innerHeight;
-        const scrollAmount = windowHeight / 2;
-        const scrollDuration = 1000; // Adjust this value to control the duration of the scroll (in milliseconds)
-        const scrollInterval = 10; // Adjust this value to control the smoothness of the scroll
-
-        let currentPosition = 0;
-        const scrollStep = scrollAmount / (scrollDuration / scrollInterval);
-
-        const intervalId = setInterval(function() {
-        if (currentPosition >= scrollAmount) {
-        clearInterval(intervalId);
-        } else {
-        currentPosition += scrollStep;
-        window.scrollBy(0, scrollStep);
-        }
-        }, scrollInterval);
-      }, 100);
-        });
       };
+
+      window.addEventListener('load', function() {
+      setTimeout(function() {
+      const windowHeight = window.innerHeight;
+      const scrollAmount = windowHeight / 2;
+      const scrollDuration = 1000; // Adjust this value to control the duration of the scroll (in milliseconds)
+      const scrollInterval = 10; // Adjust this value to control the smoothness of the scroll
+
+      let currentPosition = 0;
+      const scrollStep = scrollAmount / (scrollDuration / scrollInterval);
+
+      const intervalId = setInterval(function() {
+      if (currentPosition >= scrollAmount) {
+      clearInterval(intervalId);
+      } else {
+      currentPosition += scrollStep;
+      window.scrollBy(0, scrollStep);
+      }
+      }, scrollInterval);
+    }, 100);
+      });
 
     </script>
     <script src="script111.js" charset="utf-8"></script>
