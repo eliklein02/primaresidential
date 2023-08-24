@@ -341,7 +341,25 @@ button.fbtn:hover {
 
 
                                         /* property page */
+.parallax1p {
+  display: flex;
+  justify-content: center;
+}
 
+
+.viewourproperties {
+  width: 75%;
+  height: auto;
+  position: absolute;
+  bottom: 10vh;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 2em;
+  font-family: "lust-sans";
+  color: #436f78;
+  font-weight: bolder;
+}
 
 #search-bar {
   width: 100%;
@@ -399,7 +417,8 @@ button.fbtn:hover {
   background-repeat: no-repeat;
   width: 50%;
   height: 40vh;
-  border-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 
 }
 
@@ -409,7 +428,8 @@ button.fbtn:hover {
   background-repeat: no-repeat;
   width: 50%;
   height: 40vh;
-  border-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 
 }
 
@@ -419,7 +439,8 @@ button.fbtn:hover {
   background-repeat: no-repeat;
   width: 50%;
   height: 40vh;
-  border-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 
 }
 
@@ -429,7 +450,8 @@ button.fbtn:hover {
   background-repeat: no-repeat;
   width: 50%;
   height: 40vh;
-  border-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 
 .propertyimgoceancounty {
@@ -438,7 +460,8 @@ button.fbtn:hover {
   background-repeat: no-repeat;
   width: 50%;
   height: 40vh;
-  border-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 
 .propertyinfo {

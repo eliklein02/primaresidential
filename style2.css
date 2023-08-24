@@ -199,11 +199,34 @@ a.buttonsdiv {
   color: #436f78;
 }
 
+.materialicons {
+  vertical-align: middle;
+}
+
 .emailaddress {
   font-size: 2.3vh;
 }
                                           /* property page */
 
+
+.emptydiv {
+  display: flex;
+  justify-content: center;
+}
+
+.viewourproperties {
+  width: 75%;
+  height: 15vh;
+  position: absolute;
+  bottom: 8vh;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 2em;
+  font-family: "lust-sans";
+  color: #436f78;
+  font-weight: bolder;
+}
 
 #search-bar-m {
   text-align: center;
@@ -250,7 +273,8 @@ a.buttonsdiv {
   background-position: center;
   width: 50%;
   height: auto;
-  border-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 
 .propertyimg2630 {
@@ -260,7 +284,8 @@ a.buttonsdiv {
   background-position: center;
   width: 50%;
   height: auto;
-  border-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 
 .propertyimg209 {
@@ -270,7 +295,8 @@ a.buttonsdiv {
   background-position: center;
   width: 50%;
   height: auto;
-  border-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 
 .propertyimg1816 {
@@ -280,7 +306,8 @@ a.buttonsdiv {
   background-position: center;
   width: 50%;
   height: auto;
-  border-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 
 .propertyimgoceancounty {
@@ -290,7 +317,8 @@ a.buttonsdiv {
   background-position: center;
   width: 50%;
   height: auto;
-  border-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 
 .propertyinfo {
