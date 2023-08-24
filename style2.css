@@ -20,7 +20,7 @@ body:before {
   top: 0;
   max-width: 100vw;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: -10;
   background: linear-gradient(to bottom, rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url("prima2.7.jpg")  no-repeat center center;
   -webkit-background-size: cover;
@@ -54,11 +54,15 @@ body:before {
 .emptydiv {
   width: 100%;
   height: 100vh;
+  max-height: 100vh;
   background: url('prima2.6.jpg') no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 .primatxt {
@@ -209,23 +213,15 @@ a.buttonsdiv {
                                           /* property page */
 
 
-.emptydiv {
-  display: flex;
-  justify-content: center;
-}
-
 .viewourproperties {
   width: 75%;
-  height: 15vh;
-  position: absolute;
-  bottom: 8vh;
-  margin-left: auto;
-  margin-right: auto;
+  height: auto;
   text-align: center;
   font-size: 2em;
   font-family: "lust-sans";
   color: #436f78;
   font-weight: bolder;
+  margin-bottom: 5vh;
 }
 
 #search-bar-m {
