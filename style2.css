@@ -117,10 +117,6 @@ body:before {
   font-family: Montserrat;
 }
 
-a.buttonsdiv {
-  text-decoration: none;
-}
-
 .myBtn {
   padding-left: 1vw;
   padding-right: 1vw;
@@ -145,7 +141,7 @@ a.buttonsdiv {
   /* animation: slide 2s forward; */
 }
 
-a.myBtn {
+a.propertiesbutton {
   text-decoration: none;
 }
 
