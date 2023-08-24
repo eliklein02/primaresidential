@@ -55,7 +55,7 @@ body:before {
   width: 100%;
   height: 100vh;
   max-height: 100vh;
-  background: url('prima2.6.2.jpg') no-repeat center center;
+  background: url('primahomemobile.jpg') no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -83,10 +83,12 @@ body:before {
 
 .yatll {
   padding-top: 3vh;
+  margin-bottom: 3vh;
   margin-left: auto;
   margin-right: auto;
   width: 70%;
   border-top: 5px solid #436f78;
+  border-bottom: 5px dashed #436f78;
   margin-top: 5vh;
   text-align: center;
   font-size: 7vw;
