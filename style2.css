@@ -142,7 +142,7 @@ body:before {
 }
 
 a.propertiesbutton {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .secondimg {
