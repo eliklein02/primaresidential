@@ -100,7 +100,7 @@ body:before {
 .buttonsdiv {
   height: auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
   gap: 3vw;
