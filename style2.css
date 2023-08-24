@@ -283,6 +283,16 @@ a.buttonsdiv {
   border-radius: 15px;
 }
 
+.propertyimgoceancounty {
+  background-image: url('oceancounty1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50%;
+  height: auto;
+  border-radius: 15px;
+}
+
 .propertyinfo {
 width: 50%;
 height: 25vh;
@@ -344,7 +354,7 @@ font-family: Montserrat;
   background-color: #dec699;
   font-size: 0.9em;
   border-radius: 5px;
-  width: 40vw;
+  width: 50vw;
   height: 4vh;
 }
 

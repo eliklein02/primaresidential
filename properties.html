@@ -62,6 +62,13 @@
           1816 Cecil B. Moore Avenue, Philadelphia, PA
         </div>
       </div>
+      <div class="properties nj" id = "jersey3 nj3 njDiv3">
+        <div class="propertyimgoceancounty">
+        </div>
+        <div class="propertyinfo">
+          Ocean County SFH Portfolio
+        </div>
+      </div>
     </div>
 
 
@@ -117,6 +124,13 @@
           1816 Cecil B. Moore Avenue, Philadelphia, PA
         </div>
       </div>
+      <div class="properties nj" id = "n3">
+        <div class="propertyimgoceancounty">
+        </div>
+        <div class="propertyinfo">
+          Ocean County SFH Portfolio
+        </div>
+      </div>
     </div>
 
 
@@ -129,6 +143,7 @@
         var alloption2 = document.querySelector("#penn\\ pa\\ paDiv1");
         var alloption3 = document.querySelector("#penn2\\ pa2\\ paDiv2");
         var alloption4 = document.querySelector("#jersey2\\ nj2\\ njDiv2");
+        var alloption5 = document.querySelector("#jersey3\\ nj3\\ njDiv3");
 
         // Perform your desired action based on the selected option
         switch(selectedOption) {
@@ -137,21 +152,29 @@
             alloption2.style.display="flex";
             alloption3.style.display="flex";
             alloption4.style.display="flex";
+            alloption5.style.display="flex";
           break;
           case "1":
             alloption3.style.display="none";
             alloption2.style.display="none";
             alloption1.style.display="flex";
             alloption4.style.display="flex";
+            alloption5.style.display="flex";
           break;
           case "2":
             alloption1.style.display="none";
             alloption4.style.display="none";
+            alloption5.style.display="none";
             alloption2.style.display="flex";
             alloption3.style.display="flex";
           break;
         }
       });
+
+
+
+
+
 
       document.getElementById("selectormobile").addEventListener("change", function() {
         // var selectedOption = document.getElementById("selector").value;
@@ -160,6 +183,7 @@
         var alloption2 = document.querySelector("#p1");
         var alloption3 = document.querySelector("#p2");
         var alloption4 = document.querySelector("#n2");
+        var alloption5 = document.querySelector("#n3");
 
         // Perform your desired action based on the selected option
         switch(selectedOption) {
@@ -168,21 +192,29 @@
             alloption2.style.display="flex";
             alloption3.style.display="flex";
             alloption4.style.display="flex";
+            alloption4.style.display="flex";
           break;
           case "1":
             alloption3.style.display="none";
             alloption2.style.display="none";
             alloption1.style.display="flex";
             alloption4.style.display="flex";
+            alloption5.style.display="flex";
           break;
           case "2":
             alloption1.style.display="none";
             alloption4.style.display="none";
+            alloption5.style.display="none";
             alloption2.style.display="flex";
             alloption3.style.display="flex";
           break;
         }
       });
+
+
+
+
+
 
       window.addEventListener('load', function() {
       setTimeout(function() {

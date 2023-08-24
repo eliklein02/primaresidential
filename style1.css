@@ -430,7 +430,15 @@ button.fbtn:hover {
   width: 50%;
   height: 40vh;
   border-radius: 15px;
+}
 
+.propertyimgoceancounty {
+  background-image: url('oceancounty1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 50%;
+  height: 40vh;
+  border-radius: 15px;
 }
 
 .propertyinfo {
