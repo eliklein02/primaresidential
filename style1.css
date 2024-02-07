@@ -406,7 +406,7 @@ button.fbtn:hover {
   flex-direction: row;
   margin-right: auto;
   margin-left: auto;
-  border: 2px solid #436f78;
+  border: 1px solid #436f78;
   margin-bottom: 5vh;
   border-radius: 15px;
 }
@@ -456,6 +456,16 @@ button.fbtn:hover {
 
 .propertyimgoceancounty {
   background-image: url('oceancounty1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 50%;
+  height: 40vh;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.propertyimg232 {
+  background-image: url('232cooper.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   width: 50%;

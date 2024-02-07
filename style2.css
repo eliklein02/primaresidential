@@ -142,7 +142,7 @@ body:before {
 }
 
 a.propertiesbutton {
-  text-decoration: none !important;
+  text-decoration: none;
 }
 
 .secondimg {
@@ -316,6 +316,17 @@ a.propertiesbutton {
 
 .propertyimgoceancounty {
   background-image: url('oceancounty1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50%;
+  height: auto;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.propertyimg232 {
+  background-image: url('232cooper.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
